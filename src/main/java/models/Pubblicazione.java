@@ -3,15 +3,17 @@ package models;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 
 @Entity
-@Table
+@Table(name = "pubblicazioni")
 @Getter
 @Setter
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @NoArgsConstructor
+@ToString
 public abstract class Pubblicazione {
     @Id
     @GeneratedValue
